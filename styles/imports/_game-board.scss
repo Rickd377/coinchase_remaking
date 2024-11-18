@@ -69,6 +69,26 @@
     position: relative;
     z-index: 1;
 
+    .players {
+      position: absolute;
+      @include flex;
+      gap: 10px;
+      height: 60%;
+
+      .player-1,
+      .player-2 {
+        width: 40px;
+      }
+
+      .player-1 {
+        align-self: flex-start;
+      }
+
+      .player-2 {
+        align-self: flex-end;
+      }
+    }
+
     &::before {
       position: absolute;
       top: 0;

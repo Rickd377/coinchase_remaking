@@ -123,6 +123,25 @@ img {
   position: relative;
   z-index: 1;
 }
+.game-board .box .players {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  height: 60%;
+}
+.game-board .box .players .player-1,
+.game-board .box .players .player-2 {
+  width: 40px;
+}
+.game-board .box .players .player-1 {
+  align-self: flex-start;
+}
+.game-board .box .players .player-2 {
+  align-self: flex-end;
+}
 .game-board .box::before {
   position: absolute;
   top: 0;
