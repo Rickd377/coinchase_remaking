@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, figure, hr, fieldset, legend, button, input, textarea {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  height: 100dvh;
+  background: linear-gradient(to bottom right, #825fff, #f6d8ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+}
+
+.game-board {
+  width: 80vw;
+  height: 70vh;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 12px 12px 0 #f8e0ff;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  position: relative;
+  gap: 20px;
+  padding: 20px;
+  /* Reverse even rows */
+}
+.game-board .path-container {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 10px;
+  gap: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 5px;
+}
+.game-board .path-container .path {
+  width: 99.5%;
+  height: 90%;
+  background-color: #f8e0ff;
+  border-radius: 10px;
+  position: relative;
+}
+.game-board .path-container .path::before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 30px;
+  z-index: 0;
+  background-color: #f8e0ff;
+  top: -20px;
+}
+.game-board .path-container .path:nth-child(1) {
+  border-radius: 10px 10px 0 10px !important;
+}
+.game-board .path-container .path:nth-child(1)::before {
+  display: none;
+}
+.game-board .path-container .path:nth-child(odd) {
+  border-radius: 0 10px 0 10px;
+}
+.game-board .path-container .path:nth-child(odd)::before {
+  left: 0;
+}
+.game-board .path-container .path:nth-child(even) {
+  border-radius: 10px 0 10px 0;
+}
+.game-board .path-container .path:nth-child(even)::before {
+  right: 0;
+}
+.game-board .path-container .path:nth-child(5) {
+  border-radius: 0 10px 10px 10px !important;
+}
+.game-board .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+.game-board .box::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 0 0 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.game-board .box .box-image {
+  height: 65px;
+}
+.game-board .box-1::before {
+  content: "1";
+}
+.game-board .box-2::before {
+  content: "2";
+}
+.game-board .box-3::before {
+  content: "3";
+}
+.game-board .box-4::before {
+  content: "4";
+}
+.game-board .box-5::before {
+  content: "5";
+}
+.game-board .box-6::before {
+  content: "6";
+}
+.game-board .box-7::before {
+  content: "7";
+}
+.game-board .box-8::before {
+  content: "8";
+}
+.game-board .box-9::before {
+  content: "9";
+}
+.game-board .box-10::before {
+  content: "10";
+}
+.game-board .box-11::before {
+  content: "11";
+}
+.game-board .box-12::before {
+  content: "12";
+}
+.game-board .box-13::before {
+  content: "13";
+}
+.game-board .box-14::before {
+  content: "14";
+}
+.game-board .box-15::before {
+  content: "15";
+}
+.game-board .box-16::before {
+  content: "16";
+}
+.game-board .box-17::before {
+  content: "17";
+}
+.game-board .box-18::before {
+  content: "18";
+}
+.game-board .box-19::before {
+  content: "19";
+}
+.game-board .box-20::before {
+  content: "20";
+}
+.game-board .box-21::before {
+  content: "21";
+}
+.game-board .box-22::before {
+  content: "22";
+}
+.game-board .box-23::before {
+  content: "23";
+}
+.game-board .box-24::before {
+  content: "24";
+}
+.game-board .box-25::before {
+  content: "25";
+}
+.game-board .box-26::before {
+  content: "26";
+}
+.game-board .box-27::before {
+  content: "27";
+}
+.game-board .box-28::before {
+  content: "28";
+}
+.game-board .box-29::before {
+  content: "29";
+}
+.game-board .box-30::before {
+  content: "30";
+}
+.game-board .box-31::before {
+  content: "31";
+}
+.game-board .box-32::before {
+  content: "32";
+}
+.game-board .box-33::before {
+  content: "33";
+}
+.game-board .box-34::before {
+  content: "34";
+}
+.game-board .box-35::before {
+  content: "35";
+}
+.game-board .box-36::before {
+  content: "36";
+}
+.game-board .box-37::before {
+  content: "37";
+}
+.game-board .box-38::before {
+  content: "38";
+}
+.game-board .box-39::before {
+  content: "39";
+}
+.game-board .box-40::before {
+  content: "40";
+}
+.game-board .box-41::before {
+  content: "41";
+}
+.game-board .box-42::before {
+  content: "42";
+}
+.game-board .box-43::before {
+  content: "43";
+}
+.game-board .box-44::before {
+  content: "44";
+}
+.game-board .box-45::before {
+  content: "45";
+}
+.game-board .box-46::before {
+  content: "46";
+}
+.game-board .box-47::before {
+  content: "47";
+}
+.game-board .box-48::before {
+  content: "48";
+}
+.game-board .box-49::before {
+  content: "49";
+}
+.game-board .box-50::before {
+  content: "50";
+}
+.game-board .box:nth-child(10n-4),
+.game-board .box:nth-child(10n-3),
+.game-board .box:nth-child(10n-2),
+.game-board .box:nth-child(10n-1),
+.game-board .box:nth-child(10n) {
+  direction: rtl;
+}/*# sourceMappingURL=style.css.map */

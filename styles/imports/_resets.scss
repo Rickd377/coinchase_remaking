@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, figure, hr, fieldset, legend, button, input, textarea {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $default_font;
+  line-height: 1.6;
+  color: $text_color;
+  height: 100dvh;
+  background: linear-gradient(to bottom right, $bg_gradient_color-1, $bg_gradient_color-2);
+  @include flex;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+}
